@@ -1,0 +1,163 @@
+<html>
+<head>
+  <title>Health Checker</title>
+  <style>
+     p{
+                font-weight: bolder;
+            }
+            .man{
+                font-weight: 900px;
+            }
+            .uno{
+                width: 1250px;
+                height: 565px;
+                background-color: aquamarine;
+            }
+            img{
+            width: 400px;
+            height: 300px;
+            }
+            .what{
+                height: 550px;
+                width: 400px;
+                background-color: white;
+                border-width: 5px;
+                border-color: green;
+                border-style: groove;
+                border-radius: 9px;
+            }
+            i{
+                color: magenta;
+                font-size: 20px;
+            }
+            u{
+                color: dodgerblue;
+            }
+            b{
+                font-size: 50px;
+                color: deepskyblue;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: italic;
+            }
+            p input{
+                background-color: bisque;
+                color: black;
+                border-color: green;
+                border-style: groove;
+                border-width: 6px;
+                border-radius: 5px;
+                width: 350px;
+                height: 70px;
+            }
+            b input{
+                width: 200px;
+                height: 50px;
+                background-color: bisque;
+                color: black;
+                border-color: mediumseagreen;
+                border-style: groove;
+                border-width: 6px;
+                border-radius: 5px;
+            }
+            b input:hover{
+              background-color: burlywood;
+              color: mediumturquoise;
+            }
+            body{
+                background-color: lightgreen;
+            }
+            center img{
+                width: 600px;
+            }
+            center b img{
+                border-radius: 50px;
+                width: 90px;
+                height: 90px;
+            }
+             button{
+                background-color: lawngreen;
+                color: brown;
+                width: 120px;
+                height: 50px;
+                border-radius: 10px;
+                border-style: groove;
+                border-color: mediumspringgreen;
+                border-width: 5px;
+             }
+             .fat{
+              font-size: 40px;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: coral;
+             }
+             .fat:hover{
+              color: dodgerblue;
+             }
+             button:hover {
+      background: black;
+      transform: scale(1.5);
+    }
+    b button {
+      margin: 10px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: lawngreen;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      width: 250px;
+      text-decoration: underline;
+      text-decoration-line: none;
+    }
+            </style>
+</head>
+<body>
+  <center><h2 class="fat">Weight, Height, and Age Checker</h2></center>
+<script>
+    function checkHealth(){
+         $a = document.getElementById("weight").value;  
+      $b = document.getElementById("height").value;  
+      $c = document.getElementById("age").value;    
+      $b = $b / 100;
+      $bmi = $a / ($b * $b);
+      if ($c < 18) {
+
+      } else {
+        if ($bmi < 18.5) {
+          alert("You're Thin (Underweight)");
+          alert("you should eat a balanced diet with more calories to make you fat.");
+
+        } else if ($bmi >= 18.5 && $bmi < 25) {
+          alert("You're Normal");
+          alert("you're in a healthy weight range. Keep up the good work!");
+        } else if ($bmi >= 25 && $bmi < 30) {
+          alert("You're Overweight");
+          alert("You should consider a balanced diet and regular exercise.");
+        } else {
+          alert("You're Obese");
+          alert("You should consult a doctor for advice on weight management.");
+        }
+      }
+
+      document.getElementById("result").value;
+    }
+</script>
+<center>
+    Enter your weight (kg): 
+  <input type="number" id="weight"><br><br>
+
+  Enter your height (cm): 
+  <input type="number" id="height"><br><br>
+
+  <label>Enter your age: </label>
+  <input type="number" id="age"><br><br>
+
+  <b><button onclick="checkHealth()">Check for adults</button></b>
+
+  <p id="result"></p>
+  <b><button><a href="mack football.html">You can now train in soccer</a></button></b>
+    <b><button><a href="vollyball.html">All so you can now train in volley ball</a></button></b>
+      <b><button><a href="swimming.html">And you can now train in swimming</a></button></b>
+  </center>
